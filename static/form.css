@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(170, 199, 225);
+    text-align: center;
+    align-items: left;
+    
+}
+#prediction_form{
+    text-align: left;
+    border: 2px solid black;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 5px;
+    color: rgb(43, 26, 39);
+
+}
+.form-row {
+    display: flex;
+    margin-bottom: -22px;
+}
+label {
+    width: 120px;      /* fixed label width */
+    font-weight: bold;
+}
+
+input,select {
+    flex:1;           /* input takes remaining space */
+    padding: 2px;
+}

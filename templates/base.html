@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css')}}">
+</head>
+<body>
+    <h1> welcome to the Space Ship Transportation Prediction</h1>
+
+    <form action="/" id="prediction_form" method="post">
+        <div class="form-row">
+            <label for="HomePlanet">HomePlanet</label>
+            <select name="HomePlanet" id="HomePlanet">
+                <option value="Earth">Earth</option>
+                <option value="Europa">Europa</option>
+                <option value="Mars">Mars</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <div class="form-row">
+            <label for="CryoSleep">CryoSleep</label>
+            <input type="radio" name='CryoSleep' value='Yes'>Yes
+            <input type="radio" name='CryoSleep' value='No'>No
+        </div>
+        <br>
+        <br>
+        <div class="form-row">
+            <label for="Destination">Destination</label>
+            <select name="Destination" id="Destination">
+                <option value="TRAPPIST-1e">TRAPPIST-1e</option>
+                <option value="55 Cancri e">55 Cancri e</option>
+                <option value="PSO J318.5-22">PSO J318.5-22</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <div class="form-row">
+            <label for="Age">Age</label>
+            <input type="number" name= 'Age' min="0" max="100">
+        </div>
+        <br>
+        <br>
+        <div class="form-row">
+            <label for="VIP">VIP</label>
+            <input type="radio" name="VIP" value="Yes">Yes
+            <input type="radio" name="VIP" value="No">No
+        </div>
+        <br>
+        <br>
+        <center><label for="Expenditure">Expenditure</label></center>
+        <br>
+        <div class="form-row">
+            <label for="RoomService">RoomService</label>
+            <input type="number" name="RoomService">
+        </div>
+        <br>
+        <br>
+        <div class="form-row">
+            <label for="FoodCourt">FoodCourt</label>
+            <input type="number" name="FoodCourt">
+        </div>
+        <br>
+        <br>
+        <div class="form-row">
+            <label for="ShoppingMall">ShoppingMall</label>
+            <input type="number" name="ShoppingMall">
+        </div>
+        <br>
+        <br>
+        <div class="form-row">
+            <label for="Spa">Spa</label>
+            <input type="number" name="Spa">
+        </div>
+        <br>
+        <br>
+        <div class="form-row">
+            <label for="VRDeck">VRDeck</label>
+            <input type="number" name="VRDeck">
+        </div>
+        <br>
+        <br>
+        <center><label for="Cabin">Cabin</label></center>
+        <br>
+        <div class="form-row">
+             <label for="Deck">Cabin Deck</label>
+            <select name="Deck" id="deck">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                <option value="T">T</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <div class="form-row">
+            <label for="Num">Cabin Num</label>
+            <input type="number" name="Num" min="0" max="3000">
+        </div>
+        <br>
+        <br>
+        <div class="form-row">
+            <label for="Side">Cabin side</label>
+            <input type="radio" name="Side" value="P"> P
+            <input type="radio" name="Side" value="S"> S
+        </div>
+        <br>
+        <br>
+            <center><input type="Submit" ></center>
+    </form>
+    <br>
+    <br>
+    <br>
+
+    {% if prediction %}
+    <h2>Prediction Result: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
